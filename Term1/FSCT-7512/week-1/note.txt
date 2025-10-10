@@ -1,0 +1,69 @@
+Week 1 - Cloud Forensics
+
+nothing special really - unless you are andrew and slept through every single lecture in cit 
+
+1. Cloud Pros 
+	A. Scalability
+		- Horizontal Scalability
+			> Just slap more VMs duh
+		- Vertical Scalability
+			> Just slap more CPUs duh
+
+		Forensics computers requires more resources so scalabilty is good 
+
+		Benefits: Cost saving, Accessibility, Disaster recovery
+
+
+	B. Where the fuck are we (Totally was listening)
+		- IaaS
+			> Infrastructure is provided, like servers, OS, shit is configured by you
+			> It has the highest level of access and control by the DF team
+			> Usually will work with IaaS provider response team
+		- PaaS
+			> Platform is ready to build or deploy ad manage applications without configuration
+			> When there is a icnident, we would require access from the user and the Cloud provider
+			> Usually it requires legal actions to have access from private companys
+			> HSPII, Highly sensitvie Personal Identifiable Information
+			> Companies would want local servers as security management is easier within the same country
+		- Saas
+			> Ready, cloud based solution that someone is managing for you 
+			> Lowest level of control for a DFIR team
+			> Team must work with Cloud Provider 
+			> You have 0 control with the service
+		- DaaS
+		- FaaS
+
+	C. Deployment Models
+		- Public Cloud
+		- Private Cloud
+		- Hybrid Cloud
+		- Community Cloud
+
+		> Who has access to my data? We never know 
+
+		Global Legal Regulations
+			- How the data should be stored, viewed on cloud
+			- Individuals have the right to access, rectify and erase their personal information
+			- In EU, you would have to work with the EU investigation team 
+			- Data must be perserved within EU
+			- Californai Consumer Privacy Act- CCPA
+		
+		Managing Cyber Risks
+			- Security measures
+			- The "Doomsday" Rule
+			- Step by step incident response guide
+		
+		E-Discovery
+			- Electronic Discovery - identifying and producting data sored in digital format as part of a investigation
+			- Anything thats is relevant to investigation
+
+	D. Digital Forensics Challenges
+		> Data Size - It could be infinite
+		> Technical/Skills Challenges
+			
+	E. Legal implication of data retnetion
+		> Breach notification law
+		 	- Breacehes notification laws requires organizations to notify affected entities in event of a breach
+
+
+

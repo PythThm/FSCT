@@ -1,0 +1,78 @@
+#!/bin/bash
+echo "Enforcing Security Policy"
+
+# Combination of Part 1 & 3
+echo "Changing Home directories permissions"
+chmod 700 /home/* 2>/dev/null
+
+echo "Password Requirement applying"
+# PAM password complexity
+if ! grep -q "pam_pwquality.so" /etc/pam.d/common-password 2>/dev/null; then
+  echo "password requisite pam_pwquality.so minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1" >> /etc/pam.d/common-password
+fi
+
+echo "Last 3 password non reusable"
+if ! grep -q "remember=3" /etc/pam.d/common-password 2>/dev/bull; then
+  sed -i 's/\(pam_unix.so.*\)/\1 remember=3/' /etc/pam.d/common-password
+fi
+
+echo "Password aging limit"
+for user in $(cut -d: -f1 /etc/passwd); do
+  if id -u "$user" >/dev/null 2>&1; then
+    chage -M 60 "$user" 2>/dev/null
+  fi
+done
+
+# Lock account after 5 failed attempts
+FAILLOCK="auth required pam_faillock.so deny=5 unlock_time=600"
+if grep -q "pam_faillock.so" /etc/pam.d/common-password 2>/dev/null; then
+  echo "Update PAM..."
+  sed -i "s!^.*pam_faillock!\$FAILLOCK!" /etc/pam.d/common-password
+else
+  echo "Adding rule to PAM..."
+  echo "$FAILLOCK" >> /etc/pam.d/common-password
+fi
+
+# Part 2
+for user in $(getent group sudo wheel | cut -d: -f4 | tr ',' ' '); do
+    if [[ "$user" != "root" && "$user" != "admin" ]]; then
+        echo " - Removing $user from sudo/wheel group"
+        gpasswd -d "$user" sudo 2>/dev/null
+        gpasswd -d "$user" wheel 2>/dev/null
+    fi
+done
+
+# Explain how can MFA be implemented
+
+# Part 4
+echo "File & directory permissions"
+chmod 644 /etc/passwd
+chmod 640 /etc/shadow
+
+echo "default umasks"
+if ! grep -q "umask 027" /etc/profile 2>/dev/null; then
+  echo "umask 027" >> /etc/profile
+fi
+
+# Part 5
+echo "Enabling account monitoring"
+touch /var/log/secure
+chmod 600 /var/log/secure
+systemctl enable auditd
+systemctl start auditd
+
+# Part 6
+echo "SElinux enforcing mode"
+if command -v sestatus >/dev/null 2>&1; then
+  if sestatus | grep -q "Current mode:.*enforcing"; then
+    echo "SELinux is already in enforcing mode."
+  else
+    setenforce 1
+    sed -i 's/^SELINUX=.*/SELINUX=enforcing/' /etc/selinux/config
+    echo "SELinux set to enforcing"
+  fi
+fi
+
+echo "Done"
+
+

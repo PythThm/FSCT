@@ -1,0 +1,149 @@
+Comparison of enforce_policy.sh Scripts
+
+Efficiency
+
+Your Script:
+
+Shorter and more compact (~70 lines).
+
+Uses simple loops (e.g., for password aging).
+
+Hardcodes checks/changes (may duplicate PAM entries).
+
+Runs commands broadly (e.g., chmod /home/*).
+
+No modularity, not reusable.
+
+My Script:
+
+Longer (~300+ lines), more verbose.
+
+More idempotent (checks before modifying).
+
+Uses functions for logging and safe execution.
+
+Collects alerts into separate files.
+
+Slightly slower due to more condition checks.
+
+Verdict:
+
+Your script is more efficient in execution speed and simplicity.
+
+My script is more efficient in maintainability and safety.
+
+Readability
+
+Your Script:
+
+Minimal comments (only at section headers).
+
+Contains typos (e.g., /dev/bull).
+
+Inconsistent variable naming.
+
+Easy for a sysadmin to skim quickly.
+
+My Script:
+
+Heavily commented and structured.
+
+Clear separation of tasks (users, groups, auth, files, auditing, SELinux).
+
+Uses helper functions for logging and commands.
+
+Verbose, harder to skim quickly.
+
+Verdict:
+
+Your script is short and direct, but less readable for future maintainers.
+
+My script is well-documented and maintainable, but verbose.
+
+Coverage
+
+Your Script covers:
+
+Home directory permissions.
+
+Password complexity, expiration, reuse prevention.
+
+Lockout policy.
+
+Removes non-admins from sudo/wheel.
+
+File permissions for /etc/passwd and /etc/shadow.
+
+Enables auditd.
+
+SELinux enforcing.
+
+Missing in Your Script:
+
+Unique user accounts check (duplicate UIDs).
+
+Quarterly group membership review.
+
+MFA enforcement.
+
+Sensitive file world-readable check.
+
+Logging of actions with timestamps.
+
+Disabled inactive accounts check.
+
+My Script covers all policy items, including:
+
+Unique UID checks.
+
+Password policies and expiration.
+
+Lockout policy.
+
+sudo/wheel enforcement.
+
+No direct root login.
+
+File permissions and sensitive file scan.
+
+Default umask.
+
+Logging and auditing (auditd, faillog, lastlog).
+
+Disabled inactive accounts.
+
+SELinux enforcing.
+
+Alerts and remediation logs.
+
+Verdict:
+
+Your script = partial coverage (~60%).
+
+My script = full coverage (~100%).
+
+Suggested Improvements
+
+For Your Script:
+
+Add logging with timestamps.
+
+Fix typos (/dev/bull → /dev/null).
+
+Avoid duplicate PAM entries.
+
+Add inactive account check.
+
+Add UID uniqueness check.
+
+Use variables for repeated values.
+
+For My Script:
+
+Reduce verbosity by collapsing checks into functions.
+
+Simplify some loops.
+
+Add interactive remediation prompts.
+
+Modularize into functions like enforce_users(), enforce_groups().
