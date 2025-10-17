@@ -34,21 +34,21 @@ Relevant links:
 
 1. ESSAY: The so called Big 3 are principles / concepts that are very important in the justice system and proceedings and apply throughout. (Presumption of innocence – right to remain silent – need for proof of guilt beyond a reasonable doubt) Explain how any or all of them relate to 2 other concepts, problems or decisions (made by police or Crown counsel) we discussed in class. (4 marks)
 
->The big 3 principles can relate to the fundamental to the current Canadadian idea of the Rule of Laws: Certainty, consistency and predictability of the. Presumption of innocence and right to remain silent is applied consistently throught out the process of criminal investigation process. And it is certain that it is only proven guilty beyond a reasonable doubt. If the big 3 principle are applied consistently, then an outcome can be predicted from circumstances. 
->
->The rule of law is what uphold the structure of society, it orders society and communities. And as everyone is equal before the law, it connects to the big 3 principle. Meaning no matter who you are, the justice system will apply it without any exceptions. And judges must be impartial and independent, so that they dont pre-judge a matter which violates the presumption of innocient and proof of guilt beyond a reasonal doubt. The judgements should result from thoughtful consider only of the evidence led and arguments made before them, instead of personal bias or presumptions.
->
->It can also relate to the criminal process, Police will response to a complainant to someone who called the police, they are not the victim until there is a proof of guilt beyond a reasonable doubt of the accused. Presumption of innocence is applied throughtou when someone is getting investigated before charges, and even when they are facing charges, they are still presumed innocent. Offender is only established after the accused is found guilty and charged.
->
->A case study of the criminal process would be 'R. v. Turcotte, 2005 SCC 50 ', as in the case the accused went to the police station and reported an incident, and triggering right to remian silent throughout the police investigation. The accused was charged and at the trial the evidence against him was circumstantial. 'The evidence of the accused’s silence was not admissible as post‑offence conduct.  The right to silence would be illusory if the decision not to speak to the police could be used by the Crown as evidence of guilt.'. This enforces the big 3 principle so it upholds the values of Canadian Charter of Rights and Freedoms to equalize the power of citizens and the government
+>	The big 3 principles can relate to the fundamental to the current Canadadian idea of the Rule of Laws: Certainty, consistency and predictability of the. Presumption of innocence and right to remain silent is applied consistently throught out the process of criminal investigation process. And it is certain that it is only proven guilty beyond a reasonable doubt. If the big 3 principle are applied consistently, then an outcome can be predicted from circumstances. 
+>	
+>	The rule of law is what uphold the structure of society, it orders society and communities. And as everyone is equal before the law, it connects to the big 3 principle. Meaning no matter who you are, the justice system will apply it without any exceptions. And judges must be impartial and independent, so that they dont pre-judge a matter which violates the presumption of innocient and proof of guilt beyond a reasonal doubt. The judgements should result from thoughtful consider only of the evidence led and arguments made before them, instead of personal bias or presumptions.
+>	
+>	It can also relate to the criminal process, Police will response to a complainant to someone who called the police, they are not the victim until there is a proof of guilt beyond a reasonable doubt of the accused. Presumption of innocence is applied throughtou when someone is getting investigated before charges, and even when they are facing charges, they are still presumed innocent. Offender is only established after the accused is found guilty and charged.
+>	
+>	A case study of the criminal process would be 'R. v. Turcotte, 2005 SCC 50 ', as in the case the accused went to the police station and reported an incident, and triggering right to remian silent throughout the police investigation. The accused was charged and at the trial the evidence against him was circumstantial. 'The evidence of the accused’s silence was not admissible as post‑offence conduct.  The right to silence would be illusory if the decision not to speak to the police could be used by the Crown as evidence of guilt.'. This enforces the big 3 principle so it upholds the values of Canadian Charter of Rights and Freedoms to equalize the power of citizens and the government
 
  2. LONGER ANSWER: Certainty, consistency and predictability are goals that the law strives to achieve. Explain how the legal system attempts to achieve those goals and through what means (2 marks) and how those concepts within the law affect the **daily** lives of citizens. Use concrete examples discussed in class or use similar examples you come up with. (2 marks).
 	
->The rule of law aims to reduce or avoid erosion, vigilantism of groups of people undertaking without legal authority, corruption of the legal system dishonorary acts, police misconduct of abusing their power and authority. These promotes the certainty of the legal system, that law regulate our live, and law that regulates our live are rules that mjority of us agrees with, which makes it predictable. And that everyone is equal including the government promote consistency in the legal system.
->
->Common/case law is another example of achiveing the goals of the legal system, Judges or Juris hear trials and proceeding to make decisions. They apply legal principles to facts, which preserves the consistency and certainty. The legal principles apply to facts or to similar circumstnaces are case law and form part of the common law fits all the goals of the legal system, that it is certain it would be applied to facts, be consistent and predictable that it forms part of the common law. And the changes to common law would only be incremental over time to preserve all 3 goals of the legal system.
->
->As for the daily lives of citizens, if any of the 3 goals are failed to uphold, will fail to achieve the rule of law. That law should regulate our lives. Example would be we would not be able to walk safely on street if traffic laws and not enforced and noone obey the law. Predictability is taken away in this context, as we cannot predict if will follow rules or regulations. Another example would be police not enforcing laws when one violates, or only do so sometimes, this removes consistency and certainty of law that when someone break the law they would not be facing consequences, making it hard to predict what would happen when one violates a law, whether they are going to be charged or not.
+>	The rule of law aims to reduce or avoid erosion, vigilantism of groups of people undertaking without legal authority, corruption of the legal system dishonorary acts, police misconduct of abusing their power and authority. These promotes the certainty of the legal system, that law regulate our live, and law that regulates our live are rules that mjority of us agrees with, which makes it predictable. And that everyone is equal including the government promote consistency in the legal system.
+>	
+>	Common/case law is another example of achiveing the goals of the legal system, Judges or Juris hear trials and proceeding to make decisions. They apply legal principles to facts, which preserves the consistency and certainty. The legal principles apply to facts or to similar circumstnaces are case law and form part of the common law fits all the goals of the legal system, that it is certain it would be applied to facts, be consistent and predictable that it forms part of the common law. And the changes to common law would only be incremental over time to preserve all 3 goals of the legal system.
+>	
+>	As for the daily lives of citizens, if any of the 3 goals are failed to uphold, will fail to achieve the rule of law. That law should regulate our lives. Example would be we would not be able to walk safely on street if traffic laws and not enforced and noone obey the law. Predictability is taken away in this context, as we cannot predict if will follow rules or regulations. Another example would be police not enforcing laws when one violates, or only do so sometimes, this removes consistency and certainty of law that when someone break the law they would not be facing consequences, making it hard to predict what would happen when one violates a law, whether they are going to be charged or not.
 	
 3. What do you understand the term "independent arbiter" to mean? (1 mark)
    
@@ -62,9 +62,9 @@ Relevant links:
 
 6. Explain why it is, or why it is not, the primary duty of Crown counsel to get a conviction at trial. (Incorporate the criminal case discussed in class relating to this topic and its citation in your answer.) (2 marks)
 
->The Corwn Counsel primary duty is to examine all relevant information and documents and, following the examination, to approve for prosecution any offence or offences that they consider appropriate. They do not represnet the police or the victim, the prosecutor shall prioritize thee correct decisions before public interest. Their primary duty is to maintain the integriy of the justice process, the purpose is not to get a conviction at trial, but to ensure people have a fair trial and not to prosecute.
->
->The case study - Boucher v. The Queen, 1954 CanLII 3 (SCC) emphasized that the purpose of a cimrinal prosecution is not to obtain a conviction, it is to lay before a jury what the Crown considers to be credible evidence relevant to what is alleged to be a crime. The duty of the Counsel is to see all available legal proof of the facts is presented strongly and firmly and done fairly. The role of prosecutor shall exceludes any notions of winning or osing. They function as a matter of public duty.
+>	The Corwn Counsel primary duty is to examine all relevant information and documents and, following the examination, to approve for prosecution any offence or offences that they consider appropriate. They do not represnet the police or the victim, the prosecutor shall prioritize thee correct decisions before public interest. Their primary duty is to maintain the integriy of the justice process, the purpose is not to get a conviction at trial, but to ensure people have a fair trial and not to prosecute.
+>	
+>	The case study - Boucher v. The Queen, 1954 CanLII 3 (SCC) emphasized that the purpose of a cimrinal prosecution is not to obtain a conviction, it is to lay before a jury what the Crown considers to be credible evidence relevant to what is alleged to be a crime. The duty of the Counsel is to see all available legal proof of the facts is presented strongly and firmly and done fairly. The role of prosecutor shall exceludes any notions of winning or osing. They function as a matter of public duty.
 
 ![Question 7](./images/Pasted%20image%2020251017140905.png)
 
@@ -72,11 +72,11 @@ Relevant links:
 
  9. In the scenario in question 8, if you can arrest as a citizen without a warrant, what section of the Criminal Code authorizes that arrest? If you cannot arrest, which section of the criminal code lets you know you cannot arrest? (include any relevant subsections and explain why you chose that subsection as there may be more than one section/subsection you could use)  (2 marks)
  
->By section 494.2, as you are the owner in lawful possession of property, which is your car and your backpack. You may make and arrest without a warrant if you make the arrest at that time or if you make the arrest within ra reasonable time after the offence is committed and they belive on reasonable ground that it is not feasible in the circumstances for a peace officer to make the arrest`
+>	By section 494.2, as you are the owner in lawful possession of property, which is your car and your backpack. You may make and arrest without a warrant if you make the arrest at that time or if you make the arrest within ra reasonable time after the offence is committed and they belive on reasonable ground that it is not feasible in the circumstances for a peace officer to make the arrest`
 
  10. In the scenario in question 9. Assuming that you do arrest the person, what do you have to do with that person after the arrest? (1 mark)
  
- >According section 494.3, Anyone other than a peace officer who arrests a person without warrant shall forthwith deliver the person to a peace officer`
+ >	According section 494.3, Anyone other than a peace officer who arrests a person without warrant shall forthwith deliver the person to a peace officer`
 
 ![Question 11 & 12](./images/Pasted%20image%2020251017141015.png)
 
@@ -84,7 +84,7 @@ Relevant links:
      
 	 What is the main difference between an appearance notice or an undertaking to a peace officer? (1 mark)
  
- >An Undertaking will have additional conditions in addition to the mandatory condition being the accused must attend court. Under section 501.3`
+ >	An Undertaking will have additional conditions in addition to the mandatory condition being the accused must attend court. Under section 501.3`
 
 ![Question 14](./images/Pasted%20image%2020251017141119.png)
 ![Question 15](./images/Pasted%20image%2020251017141124.png)
