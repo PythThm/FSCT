@@ -89,7 +89,7 @@
     - under this subsection, its more of a subsection for officers to follow, like take a step back of "what could happen"
     - subsection 497, give appearance notice if offence on s.553, maybe indictment, or summary conviction
     - subsection 498.1.1 exception, if rerasonble doubt that bailing might cause public harm, shall not release
-    - s.500, appearance notice, accused information, offence details, time for court, and consequences for not shoing the fuck up 
+    - s.500, appearance notice, accused information, offence details, time for court, and consequences for not showing the fuck up 
     - s.501, undertaking, condition to restrict you, rules will be gone when proceeding is over, if crown dont approve, this becomes void, no condition no more
     - s.503, 24hr rule, arrest without warrant, they shall be brought to a judge
     - a person will not appear in court if the charge has not been approved 
