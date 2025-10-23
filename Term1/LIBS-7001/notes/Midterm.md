@@ -18,37 +18,45 @@
 - Redefining "refugee" exclude certain groups may deny them legal protection
 - Calling protesters "rioters" can justify hasher police action and shift public perception
 
+#### Example: Child Abuse
+- Content: Any act that results in physical, emotional, sexual harm, or significant risk to a person that is underage
+- Intent: To protect children's wellbeing, to describe thresholds for liability
+- Effect: Triggers reporting, can stigmatize families but prioritize children's safety
+
 # Functions of Parody
 1. Ironic signaling of difference by similarity
 2. A deliberate message from the writer
 3. "listen again to this thing and see how ridiculous it is"
-4. Political Agendas 
+4.  Reveals Political Agendas 
 5. "Is a repetition with critical distance which allows ironic signaling of differences at the very heart of similarity"
 6. Primary function is "critical reworking of history" because it creates a "critical distance"
 
 # Analogy
 #### 1. Definition of Analogy
 - A comparison between two different things that will relate in someway. It helps clarify a argument
+- Explain things difficult to understand, like philosophy
+- compare vivid image, compare knowledge to fire, the concept of it
+- extended metaphor or simile
 
 #### 2. Types of Analogy
 1. Literal Analogy
 	- Actual and substantial similarity between the two cases
 	- Real logical relationships
-2. Figurative Analogy Analogy
-	- comparision with metaphors between two elements
+2. Figurative Analogy 
+	- comparison with metaphors between two elements
 	- not literal
 	- can still be used to make a political point
 	- "Harper of Afghan", "Softwood lumber deal"
 
 #### 3.Examples of Analogies
 - "A Computer's CPU is like the brain - it process information and controls the system"
-- "Time is like a river - it flows contiuously and never returns once it passes"
+- "Time is like a river - it flows continuously and never returns once it passes"
 
 #### 4. Comparison to Induction
- Anology is based on similarity where as induction is more based on observation, almost like a generalization (ie of induction: "Evey swan I've seen is white, therefore all swans are white")
+ Analogy is based on similarity where as induction is more based on observation, almost like a generalization (i.e. of induction: "Every swan I've seen is white, therefore all swans are white")
 
 #### 5. Important to Remember
-- The similarities between two things must concern significant aspacts of the two things
+- The similarities between two things must concern significant aspects of the two things
 - The analogy must not ignore pertinent dissimilarities between the two things being compared
 
 # 2 Types of Cognitive Surplus and what is it
@@ -68,7 +76,7 @@
 - Supporting Local Businesses
 - ie: Forums of a game or Neighbors organizing a food drive for families in need 
 
-# 3 oral Rhetoric Devices 
+# 3 Oral Rhetoric Devices 
 #### Epideictic Oratory
 - A speech or writing that praises or blames
 - Present time
