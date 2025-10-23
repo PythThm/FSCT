@@ -108,3 +108,16 @@
 - past tense
 - purpose: to accuse or defend
 - Justice or injustice
+
+
+# Credit
+	1. French Guy
+	2. Draw
+	3. Yes
+	4. Soba (Japanese noodle)
+	5. Shivering
+	6. Ex-CIT guys from set B
+	7. Girl #1
+	8. Girl #2
+	9. Bill Nye the science guy
+	10. Calvin Nguyen
