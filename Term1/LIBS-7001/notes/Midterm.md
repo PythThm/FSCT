@@ -23,8 +23,21 @@
 - Intent: To protect children's wellbeing, to describe thresholds for liability
 - Effect: Triggers reporting, can stigmatize families but prioritize children's safety
 
+## Descriptive vs Prescriptive
+#### Descriptive
+1. Focus: How things are
+2. Approach: Objective observation and analysis
+3. Goal: To understand and document current usage, variation, and patterns
+4. Example: A linguist studying how people use "ain't" in a dialect is being descriptive
+
+#### Prescriptive
+1. Focus: How things should be, putting meaning
+2. Approach: Setting rules and standards
+3. Goal: To enforce correctness and achieve a specific standard
+4. Example: A teacher correcting a student's grammar for not following a specific rule is being prescriptive
+
 # Functions of Parody
-1. Ironic signaling of difference by similarity
+1. Ironic signalling of difference by similarity
 2. A deliberate message from the writer
 3. "listen again to this thing and see how ridiculous it is"
 4.  Reveals Political Agendas 
@@ -37,7 +50,7 @@
 - Explain things difficult to understand, like philosophy
 - compare vivid image, compare knowledge to fire, the concept of it
 - extended metaphor or simile
-
+ 
 #### 2. Types of Analogy
 1. Literal Analogy
 	- Actual and substantial similarity between the two cases
@@ -68,13 +81,13 @@
 - principles and responsibilities that are essential for the functioning of society
 - Laws, voting
 - Benefitting the Society
-- ie: regarding politics, going to vote, respecting and abiding by the law
+- ie: regarding politics, going to vote, respecting and abiding by the law, Open-source tools, contribution to wikipedia 
 
 #### Communal
-- Shared beliefs and practices that are important for the well-being of a local, often informal, group or neighborhood
-- Neighborliness
+- Shared beliefs and practices that are important for the well-being of a local, often informal, group or neighbourhood
+- Neighbourliness
 - Supporting Local Businesses
-- ie: Forums of a game or Neighbors organizing a food drive for families in need 
+- ie: Forums of a game or Neighbours organizing a food drive for families in need 
 
 # 3 Oral Rhetoric Devices 
 #### Epideictic Oratory

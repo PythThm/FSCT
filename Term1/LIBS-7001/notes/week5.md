@@ -22,7 +22,7 @@
     - what is induction?
         - statistic prediction, pattern recognition
         - to strengthen your claim, more evidence (how algorithms are build)
-        - it is persuasice when numbers are present
+        - it is persuasive when numbers are present
         - strength of science is inductive 
         - compare things in the same class, humans to humans
     - analogy
