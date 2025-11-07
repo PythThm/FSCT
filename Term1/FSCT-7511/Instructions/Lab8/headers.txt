@@ -1,0 +1,79 @@
+### Message 1
+Authentication-Results: mail.testserv.local; spf=pass smtp.mailfrom=example.com; dkim=pass header.d=example.com; dmarc=pass header.from=example.com
+Received: from localhost (localhost [127.0.0.1]) by mail.testserv.local (Postfix) with ESMTP id 3F2A1C; Thu, 30 Oct 2025 10:12:05 -0700 (PDT)
+From: "Alice Johnson" <alice@example.com>
+To: student@localhost
+Subject: Course update
+Message-ID: <msg1.20251030@example.com>
+
+### Message 2
+Authentication-Results: mx.google.com; spf=pass smtp.mailfrom=university.edu; dkim=pass header.d=university.edu; dmarc=pass header.from=university.edu
+Received: from mail.university.edu (mail.university.edu [192.0.2.45]) by mx.google.com with ESMTPS id x7si12345qka.2025.10.29.12.22.11
+From: "Dept Admin" <admin@university.edu>
+To: student@localhost
+Subject: Registration notice
+Message-ID: <msg2.20251029@university.edu>
+
+### Message 3
+Authentication-Results: mail.testserv.local; spf=none smtp.mailfrom=smallbiz.com; dkim=none; dmarc=none header.from=smallbiz.com
+Received: from mail.smallbiz.com (mail.smallbiz.com [198.51.100.23]) by mail.testserv.local (Postfix) with ESMTP id 7B9C2D; Wed, 29 Oct 2025 09:05:33 -0700 (PDT)
+From: "Billing" <billing@smallbiz.com>
+To: student@localhost
+Subject: Invoice attached
+Message-ID: <msg3.20251029@smallbiz.com>
+
+### Message 4
+Authentication-Results: mail.provider.net; spf=pass smtp.mailfrom=provider.net; dkim=pass header.d=provider.net; dmarc=pass header.from=provider.net
+Received: from smtp.provider.net (smtp.provider.net [203.0.113.11]) by mail.testserv.local (Postfix) with ESMTPS id 8C4D3E; Tue, 28 Oct 2025 14:33:21 -0700 (PDT)
+From: "Support Team" <support@provider.net>
+To: student@localhost
+Subject: Password reset
+Message-ID: <msg4.20251028@provider.net>
+
+### Message 5
+Authentication-Results: mail.testserv.local; spf=pass smtp.mailfrom=shop.com; dkim=fail header.d=shop.com; dmarc=fail header.from=shop.com
+Received: from mx.shop.com (mx.shop.com [203.0.113.99]) by mail.testserv.local (Postfix) with ESMTP id 5D6E7F; Mon, 27 Oct 2025 08:11:02 -0700 (PDT)
+From: "Online Shop" <no-reply@shop.com>
+To: student@localhost
+Subject: Order confirmation
+Message-ID: <msg5.20251027@shop.com>
+
+### Message 6
+Authentication-Results: mail.testserv.local; spf=fail smtp.mailfrom=trustedcorp.com; dkim=none; dmarc=fail header.from=trustedcorp.com
+Received: from unknown (unknown [10.0.2.15]) by mail.testserv.local (Postfix) with ESMTP id 9A1B2C; Fri, 31 Oct 2025 11:00:00 -0700 (PDT)
+From: "Trusted Corp" <alerts@trustedcorp.com>
+To: student@localhost
+Subject: Important security notice
+Message-ID: <msg6.20251031@trustedcorp.com>
+
+### Message 7
+Authentication-Results: mx.emailhost.com; spf=pass smtp.mailfrom=newsletter.org; dkim=pass header.d=newsletter.org; dmarc=pass header.from=newsletter.org
+Received: from newsletter.org (newsletter.org [198.51.100.77]) by mx.emailhost.com with ESMTPS id n3k9ab; Sat, 25 Oct 2025 07:45:10 -0700
+From: "Weekly News" <news@newsletter.org>
+To: student@localhost
+Subject: Weekly digest
+Message-ID: <msg7.20251025@newsletter.org>
+
+### Message 8
+Authentication-Results: mail.testserv.local; spf=fail smtp.mailfrom=banking.com; dkim=none; dmarc=none header.from=banking.com
+Received: from suspicious.host (suspicious.host [203.0.113.250]) by mail.testserv.local (Postfix) with ESMTP id 6F7A8B; Sun, 26 Oct 2025 16:20:44 -0700 (PDT)
+From: "Your Bank" <security@banking.com>
+To: student@localhost
+Subject: Account alert
+Message-ID: <msg8.20251026@banking.com>
+
+### Message 9
+Authentication-Results: mail.testserv.local; spf=pass smtp.mailfrom=service.io; dkim=pass header.d=service.io; dmarc=pass header.from=service.io
+Received: from service.io (service.io [192.0.2.88]) by mail.testserv.local (Postfix) with ESMTP id 4E3F2A; Thu, 30 Oct 2025 09:58:12 -0700 (PDT)
+From: "Service Team" <notifications@service.io>
+To: student@localhost
+Subject: API usage report
+Message-ID: <msg9.20251030@service.io>
+
+### Message 10
+Authentication-Results: mail.testserv.local; spf=neutral smtp.mailfrom=randomsite.com; dkim=none; dmarc=none header.from=randomsite.com
+Received: from 127.0.0.1 (localhost [127.0.0.1]) by mail.testserv.local (Postfix) with ESMTP id 1B2C3D; Wed, 29 Oct 2025 22:10:05 -0700 (PDT)
+From: "Admin Team" <admin@randomsite.com>
+To: student@localhost
+Subject: Service notice
+Message-ID: <msg10.20251029@randomsite.com>
