@@ -6,36 +6,36 @@
 - both are different things
 - fundamental purpose is under s.718
 - principle is under s.718.1
-#### 1. Purpose of Sentencing 
+# 1. Purpose of Sentencing 
 - protect the society and to do crime prevention 
 - when a judge crafting a sentencing, they make it appropriate to that offence
 - trying to effect these purpose the sentence are to give
 - some are more important based on the offence
 - its all balanced out in specific cases
 - these are the back and bones of the purpose of sentencing
-1. sub a 
+#### 1. sub a 
 	- denunciation
 	- give a message through the sentence
 	- basic code of value in society
 	- court shows the public and sends the message to the community
 	- the worse offence it is, the more the court need to "push it" away 
-2. sub b 
+#### 2. sub b 
 	- to deter other people from committing the offence
 	- doing fent, don't do it, its bad, you get jailed
-3. sub c 
+#### 3. sub c 
 	- seperation from the society
 	- jail is the last resort
-4. sub d
+#### 4. sub d
 	- attempt to bring wholeness back to the society
 	- try and help this offender to not do this again
 	- what if they come from a bad background
 	- how to help them
 	- probation order to help them
-5. sub e
+#### 5. sub e
 	- reparation for harm done to victim and community
 	- community works, get them to contribute to the society
 	- financial losses, give back the money bitch ass nigga
-6. sub f
+#### 6. sub f
 	- promote a sense of responsibility in offenders
 	- acknowledge the harm done
 	- restorative principles from d, e, f
@@ -47,25 +47,25 @@
 - saying what the government wants to do 
 - a more realistic approach
 
-#### 2. Principle
+# 2. Principle
 - guideline of when to make a sentencing more harsh or not
 - "A sentence must be proportionate to the gravity of the offence and the degree of responsibility of the offender."
 - gravity of the offence, pushing someone over vs murdering a child
 - moral culpability of that person
 - degree of responsibility of the offence, stealing because you are starving or out of spite
-1. s.718.2-a
+#### 1. s.718.2-a
 	1. aggravating circumstances relating to the offence would be more harsh
 	2. under the factors of this section
 	3. required to consider a harsher sentencing
 	4. sub i: crime by hate is worse
-2. s.718.2-b
+#### 2. s.718.2-b
 	1. similarity of the offence
 	2. look at other case law and cases
 	3. and see whats the sentence would be
 	4. similar background? similar sentencing
 	5. no 2 offenders are the same 
 	6. as long as it works with the other principles of sentencing
-3. s.718.2-c
+#### 3. s.718.2-c
 	1. consecutive sentences
 	2. multiple charges, more than one thing at a times
 	3. stacking sentencing, 3 year + 1 year + 1 year = 5 years
@@ -73,7 +73,7 @@
 	5. so the offender aint going to have a miserable life
 	6. we dont want our prison to be filled up
 	7. dont want offenders thinking that they dont have hope of getting better in life
-4. s.718.2-d
+#### 4. s.718.2-d
 	1. possibliity of lighter sentence
 	2. restraint
 5. s.718.2-e
@@ -85,7 +85,7 @@
 # Tools of sentencing
 - different sanctions, stacking on each other
 
-#### 1. discharge [s.730](https://laws-lois.justice.gc.ca/eng/acts/C-46/page-123.html#docCont)
+#### 1. Discharge [s.730](https://laws-lois.justice.gc.ca/eng/acts/C-46/page-123.html#docCont)
 	1. conditional or absolute
 	2. no need for probation, go on for your life, but the thing stays on your criminal record for a year
 	3. conditional is placed for probation up to 3 years, temporary criminal record
