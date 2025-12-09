@@ -74,32 +74,32 @@
 				- Faraday bags are often used so signals from outside is blocked
 			
 3. Investigation Process
-		- Step 1 - Identification
-			- Removable media (floppies, CDs, USB drives)
-			- Cellular Phones and Smart Phones
-			- Small device docking units and chargers
-			- USB Storage devices (external harddrives, keychains, smart watches)
-			- Memory cards (SD cards, micro SDs)
-			- Digital Camera, Printers (as long as there is a hard drive in it)
-			- Modems, routers (Logging files)
+	- Step 1 - Identification
+		- Removable media (floppies, CDs, USB drives)
+		- Cellular Phones and Smart Phones
+		- Small device docking units and chargers
+		- USB Storage devices (external harddrives, keychains, smart watches)
+		- Memory cards (SD cards, micro SDs)
+		- Digital Camera, Printers (as long as there is a hard drive in it)
+		- Modems, routers (Logging files)
 		
-		- Step 2 - Data Preservation - Live vs Dead Devices
-			- Live device 
-				- Memory
-				- Browser History Data, event data
-				- Cloud data ("Avalialbe data")
-			- Dead device
-				- pop the hood, get the disk get the data
-			
-			- Encryption
-				- Apple machines are the most secure machines and encrypted (we currently do not have technology to unlock apple pcs)
-					* you cannot testify yourself according to Canadian Chapter 8
+	- Step 2 - Data Preservation - Live vs Dead Devices
+		- Live device 
+			- Memory
+			- Browser History Data, event data
+			- Cloud data ("Avalialbe data")
+		- Dead device
+			- pop the hood, get the disk get the data
+		
+		- Encryption
+			- Apple machines are the most secure machines and encrypted (we currently do not have technology to unlock apple pcs)
+				* you cannot testify yourself according to Canadian Chapter 8
 
-			- Tools for perserving the Evidence
-				- Clone or Image the digital media
-				- Onsite imaging vs Seizing the drive
-				- Different tools and approaches
-				- Risk of contamination
+		- Tools for perserving the Evidence
+			- Clone or Image the digital media
+			- Onsite imaging vs Seizing the drive
+			- Different tools and approaches
+			- Risk of contamination
 
 		- Step 3 - Analyzing the evidence
 			- File Recovery: Deleted and partially overwritten

@@ -41,11 +41,11 @@
 	- restorative principles from d, e, f
 
 #### Restoration
-- restorative justice
-- SCC recognizes that jail aint doing shit, aint going to fix broken people (emo club)
-- "Bill c-41, jail should be reserved for those who should be there, use the resources wisely"
-- saying what the government wants to do 
-- a more realistic approach
+	- restorative justice
+	- SCC recognizes that jail aint doing shit, aint going to fix broken people (emo club)
+	- "Bill c-41, jail should be reserved for those who should be there, use the resources wisely"
+	- saying what the government wants to do 
+	- a more realistic approach
 
 # 2. Principle
 - guideline of when to make a sentencing more harsh or not
@@ -76,7 +76,7 @@
 #### 4. s.718.2-d
 	1. possibliity of lighter sentence
 	2. restraint
-5. s.718.2-e
+#### 5. s.718.2-e
 	1. any other sanctions other than prison should be considered first
 	2. but should also consider all other principles first
 	3. not fair treatment to first nations
