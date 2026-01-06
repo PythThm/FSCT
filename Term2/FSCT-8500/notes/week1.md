@@ -29,7 +29,12 @@
 2. Physical: Requires special tools and training to view and interpret, such as metadata, geo-data
 
 - How accurate is the data we collected? 
-- "sms.oL6"
+- celebrite can pull the data but misinterpret the data, what if the timezone?
+- compare the actual text message with the info celebrite given, make sure its accurate
 
-####
+#### Validation
+- "Trust your eyes", Cross tools and compare 2 reports 
+- Call detail Records, verify the CDR with the provider to remove concerns about the number being spoofed 
+- 
+
 
