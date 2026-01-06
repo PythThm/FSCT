@@ -36,4 +36,65 @@
 8. **Why is MD5 not used?**
 	1. MD5 is known to suffer from extensive hash collision vulnerabilities
 	2. Hash collision occurs when different messages result in the same hash value, and can undermine the verification of data integrity, which is the primary purpose of hashing
-9. 
+9. **Can you reverse hash values**
+	1. Hash functions are designed to create a unique message like a fingerprint, but certain hashing algorithms can suffer from hash collision
+	2. Tools can be used like Miracle Salad or CrackStation on be used to reverse hash values
+10. **What is the apple file system**
+	1. HFS+ and AFPS
+	2. **HFS+ (Hierarchical File System Plus):** When using Boot Camp to enable dual boot capability on an Apple computer, the process automatically resizes the HFS+ partition to create space for the second OS installation. On HFS+ volumes, each file receives a unique, sequentially numbered identification number called the **CATALOG NODE ID (CNID)**, which is deleted when the file is deleted and cannot be altered, offering a great benefit to forensic examiners
+	3. macOS can read NTFS but cannot write to it
+11. **Explain what is journalling in ntfs**
+	1. "Transactional" file system
+	2. The core purpose of journaling is to ensure the integrity and robustness of the file system
+	3. Transaction can be defined as any operation that alters the file system data or directory structure
+	4. Atomic Operations: Once a transaction begins, it must be completed or rolled back
+
+# Final 
+1. Hardware and Software to bring
+	1. Hardware Write Blockers like Tableau, they must be tested quarterly by either hashing a drive and checking the hash value a know value to that drive or by testing with software, also check for firmware updates for the write blocker.
+	2. Hardware Imagers like Tableau can be brought on site as it provides fast imaging speed and better error handling when capturing data from laptop and external medias
+	3. Different types of Cables for different devices like thunderbolt, or USB C
+	4. Sanitized Drives like external HDDs to store the images, overwriting is preferred to be done through WinHex or encase, prevents cross-contamination to prevent preexisting data on the drive from contaminating the evidence that will be placed onto
+	5. Search Laptop that contains software tools like FTK imager, EDD, Encase Forensic Imager, Cellebrite, Blackbag Macquisition, OSXpmem, LIME or Magnet AXIOM. Between searches the laptop needs to be wiped and before each search it need to have software preinstalled with a image, you will need to prove it is wiped, also regularly check for firmware update
+	6. USBs with live forensics tools like FTK imager, EDD, EnCase or even Linux live boots like Kali Linux
+	7. Consider about internet connection, mobile hotspots, sim card or portable modems
+	8. Cameras with SD cards to take photos from the crime scene, it needs to be wiped clean before the search. Also bring extra battery and SD card for the camera in case you run out of memory or battery.
+	9. Faraday bags/box
+	10. Flashlight
+	11. Notebook
+	12. Drive labels
+	13. Chain of Custody Tags/Labels
+	14. Evidence Worksheet for the computer and Hard Drive
+2. Examination of Devices
+	1. MacBook
+		1. Take photos of it and document it on your notebook
+		2. Check for the power lighting or how heated is the MacBook, it might give you clues to determine if it is in safe sleep mode or powered off, document your assumption
+		3. Regardless of the above situation, do not turn the device on and treat it as dead acquisition and aim to perform TDM. As RAM contents is written to internal storage in safe sleep, waking the MacBook will result in internal storage being wiped. And we don't have any information on if filevault is present or not.
+		4. Bag the MacBook and charger as evidence and document
+	2. Lenovo Laptop
+		1. Take photos of the state of the laptop and document it on your notebook
+		2. By Order of Volatility, the most volatile data like RAM should be captured first, by using FTK imager. Take notes of your actions for why we are proceeding with live memory acquisition, in this case it to obtain remotely stored emails or encrypted data possible on the laptop
+		3. Observe and check for any encryption software icons on taskbars or pop-ups, by using EDD to check if the drive is encrypted or not. 
+		4. Prepare the Hardware Write Blocker for Live Acquisition
+		5. Perform live Acquisition with FTK Imager to create a Custom Content Image to capture volatile evidence related to the open Chrome browser and the active Gmail account, like history, cookies, cache or passwords. 
+		6. Using Magnet AXIOM to collect cloud artifacts 
+		7. After volatile data is captured, hard power off and bag it as evidence and document
+	3. iPhone17 mobile phone
+		1. Take photos of the state of the phone and document it on your notebook
+		2. Check for if it is in AFU or BFU state
+		3. Isolate the device into a Faraday bag to block all signals to prevent any over the air remote wipe commands or contaminations. Might want to consider double bagging. If possible to turn off network connections like WiFi or BlueTooth, turn them off. Enable Airplane Mode. Document all process
+		4. Try to unlock the phone using the provided password, if success use Cellebrite for live file system extraction to collect all accessible decrypted data, physical extraction is not recommend as it would be time consuming. 
+		5. If the provided password is incorrect, do not attempt more entries. 
+	4. Samsung S25 mobile phone
+		1. Take photos of the state of the phone and document it on your notebook
+		2. As it is powered off, remove the SIM and put the phone in a faraday bag
+		3. Document your findings from this interaction
+	5. External Hard Drive and USB flash drive
+		1. Take photos of them and document it on your notebook
+		2. Label each device, and put them in evidence bags and prepare to take them back to the lab
+		3. Document anything related to the drives
+3. Broken Drives
+	1. 500GB external Seagate
+		If is slightly clicking and not being recognized as a drive, it is a firmware issue. Turn it off. Solutions like ACElab to update the firmware, or rewrite a module but might risk damaging the disk
+	2. 1TB internal WD
+		Find a compatible PCB donor and replace the missing PCB. After swapping rebuild ROM with PC3000 on the new PCB using the service area of the HDD

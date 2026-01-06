@@ -88,7 +88,7 @@ Growing List & Primary List
         - Rarely all heads die at the same time
         - often 1 or 2 heads start to deteriorate, while others functions normally
         - Replace the head (Bro describing it like performing a organ transfer surgery)
-        - [2] there is nothing we can do LMAO
+        - [ ] there is nothing we can do LMAO
         - new heads
         - Platters can be "Recoated" and reinstalled but the reading will have to be manually limited, very professional work
 5. Motor issues
