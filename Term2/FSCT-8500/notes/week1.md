@@ -35,6 +35,47 @@
 #### Validation
 - "Trust your eyes", Cross tools and compare 2 reports 
 - Call detail Records, verify the CDR with the provider to remove concerns about the number being spoofed 
+- Manual carving, navigate into the file system and locate the artifact in raw encoded state
+
+#### SOP - Standard Operating Procedures
+- Starting from assembling disassembling device to collecting data
+- Organization have their own SOP to handle mobile device
+- How the mobile evidence should be examined and verified
+- Different way from handling HDD
+- its like a flow chart, step by step guide on what to do when making a decision
+- When new approaches examining mobile phone comes up, we change to them 
+
+#### Data Contamination
+- phones data are volatile
+- environmental contamination or unintentional contamination
+-  OTA, application that wipe stuff, remote wipes on Andriod
+- Other device with remote control capability
+- Airplane mode, keeping the cellular signal blocked but can allow WiFi and Bluetooth signal to come through 
+- Faraday bags, aluminium methods, faraday room, tents boxes
+
+#### Legal aspects of mobile acquisition
+- charter rights chapter 8, search and seizure
+- obstruction with search can happen? 
+- Search warrants are usually the legal requirement for a search and seize process
+- Outline specific mobile phones are required in the warrants, if not the evidence will be disqualified 
+- supplementary search warrant to complete the investigation
+- additional information: subscriber information from cell companies 
+
+####  2 ways of collecting data
+1. Destructive
+	- Break something 
+	- unsort somthing
+	- will not get back to its original state
+	- you will need to get another warrant for this
+
+#### Civil search (Civil Subpoena) (Anton Piller)
+- rarely happens as its very hard to get one approved 
+- family, company conflicts  
+- even more restrictive than a search warrant 
+- Judge will have to think of how a warrant can be intrusive towards a person's life 
+
+#### MNO vs MVNO
+- Mobile network Operator vs mobile Virtual Network Operator
+- Rogers, Bell, Telus, Freedom 
+- 90% on MNOs, 10% on MVNOs
 - 
-
-
