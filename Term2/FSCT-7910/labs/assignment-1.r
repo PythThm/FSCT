@@ -20,7 +20,7 @@ peirce_outliers <- function(x, xm, sigma, R) {
   deviation > max_dev # Boolean Value
 }
 
-# Identify outliers for each case
+# Outliers 
 out_1 <- peirce_outliers(x, xm, sigma, R_values[1])
 out_2 <- peirce_outliers(x, xm, sigma, R_values[2])
 out_3 <- peirce_outliers(x, xm, sigma, R_values[3])
@@ -40,6 +40,8 @@ plot_peirce <- function(x, xm, sigma, R, outliers, title) {
   abline(h = xm + max_dev, lty = 3)
   abline(h = xm - max_dev, lty = 3)
 }
+
+par(mfrow = c(1, 3))
 
 plot_peirce(
   x, xm, sigma, R_values[1], out_1,
