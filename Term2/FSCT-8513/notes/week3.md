@@ -42,3 +42,20 @@
 - the select icons on the file tab 
 - remember to clear all selected before adding new evidence to a bookmark 
 - in "overview", the arrows on the right of the "+" sign selects all the files under that 
+
+# Timestamp
+Search
+  - Index 
+    - 4:00 - 9:22
+Creating a Report
+  - Bookmarks
+    - 9:23 - 25:00
+  - Report
+    - Explaining Report Options
+      - 25:01 - 30:10
+    - Bookmark for Reports
+      - 30:11 - 38:02
+Report Options
+  - 38:03 - 42:45
+Exploring the Report
+  - 42:46 - 51:30
