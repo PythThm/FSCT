@@ -1,7 +1,3 @@
-
-
-if (!require("ggplot2")) install.packages("ggplot2")
-if (!require("dplyr")) install.packages("dplyr")
 library(ggplot2)
 library(dplyr)
 
@@ -48,20 +44,49 @@ final_df <- bind_rows(
 )
 
 # --- 4. PLOTTING ---
-ggplot(final_df, aes(x = Index, y = Value)) +
+dev.new() 
+
+print(
+  ggplot(final_df, aes(x = Index, y = Value)) +
+    geom_point(aes(color = Status, shape = Status), size = 3) +
+    geom_hline(aes(yintercept = FinalMean, color = "Final Mean"), linewidth = 1) +
+    geom_hline(aes(yintercept = FinalMean + (3 * FinalSD), color = "3SD Boundary"), linetype = "dashed") +
+    geom_hline(aes(yintercept = FinalMean - (3 * FinalSD), color = "3SD Boundary"), linetype = "dashed") +
+    facet_wrap(~Sample, scales = "free") +
+    scale_color_manual(values = c(
+      "Included" = "black",
+      "Outlier" = "red",
+      "Final Mean" = "blue",
+      "3SD Boundary" = "darkgreen"
+    )) + 
+    scale_shape_manual(values = c("Included" = 1, "Outlier" = 4)) +
+    labs(
+      title = "Ranked Outlier Selection",
+      subtitle = "Exactly the most distant points flagged as Red Xs"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+)
+
+p <- ggplot(final_df, aes(x = Index, y = Value)) +
   geom_point(aes(color = Status, shape = Status), size = 3) +
   geom_hline(aes(yintercept = FinalMean, color = "Final Mean"), linewidth = 1) +
   geom_hline(aes(yintercept = FinalMean + (3 * FinalSD), color = "3SD Boundary"), linetype = "dashed") +
   geom_hline(aes(yintercept = FinalMean - (3 * FinalSD), color = "3SD Boundary"), linetype = "dashed") +
   facet_wrap(~Sample, scales = "free") +
-  scale_color_manual(values = c("Included" = "black", "Outlier" = "red", 
-                                "Final Mean" = "blue", "3SD Boundary" = "darkgreen")) + 
+  scale_color_manual(values = c(
+    "Included" = "black",
+    "Outlier" = "red",
+    "Final Mean" = "blue",
+    "3SD Boundary" = "darkgreen"
+  )) + 
   scale_shape_manual(values = c("Included" = 1, "Outlier" = 4)) +
-  labs(title = "Ranked Outlier Selection", 
-       subtitle = "Exactly the most distant points flagged as Red Xs") +
-  theme_minimal() + theme(legend.position = "bottom")
+  theme_minimal()
+
+ggsave("ranked_outliers.png", p, width = 10, height = 6, dpi = 300)
+
+
 
 # Verification in console
 table(final_df$Sample, final_df$Status)
-
 
