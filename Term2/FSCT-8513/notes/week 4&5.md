@@ -51,4 +51,38 @@
 - usually user do not delete shortcuts, making them valuable 
 - user > 'user' > Roaming > microsoft > windows > recent 
 - you can find even removable drives shortcuts 
-- 
+
+# Labels
+- right click on the file > labels 
+- you can share labels with your friends and family
+- you can import labels (theme or existing evidence)
+- you can mark multiple labels for the same file 
+- you can exclude include them as well 
+- you can include labels in reports 
+- they are temporary placeholders unlike bookmarks 
+
+# Email
+- email status: attachments, details of emails
+- email archives: any container that holds emails
+- email by date: need any more explanation?
+- email address: by domain name, sender, etc
+- email: message types 
+- you can right click on the email and select where to view the email (location of the email) (bottom option)(explore)
+
+# Bookmark
+- you can only remove an item's bookmark under the bookmark's tab 
+- bookmark information, comments, etc
+- you can bookmark partially of a file 
+- if you want to move an item to a different bookmark, just right click and add to another bookmark, and remove it from the old bookmark 
+
+# Report
+ - SCP - Solicitor-client privilege
+ - every client communications with their lawyer is private, no outsiders should get that information
+ - often federal investigation we will be searching for things with index, privilege information, bookmark but not include in report 
+ - other details refer back to week 3 notes 
+
+# System Information
+- manage evidence
+- you can take screenshot in ftk (3rd button next toe filter manager)
+-  the report will shot the screenshot as well
+- everything in ftk is labelled with an id 
