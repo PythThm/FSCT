@@ -69,5 +69,29 @@ ___
 - Documents
 	- Carving or parsing 
 	- carving shows the location, and the file was usually deleted
-
-
+---
+# Report
+## What is needed?
+- timezones (est), how do we check again? 
+- bookmarks (ofc)
+## Bookmarks
+- the tab is on the right
+- selecting or create a new bookmark 
+## Timeline
+- documents have multiple entries
+- based on their metadata, time of when it was accessed 
+- you can see the artifact informations, like caches 
+- you can copy and past the artifact information links and see what its about 
+- should you browse to the link? it might be malicious, check the links (bitdefender)
+## Export options
+ - csv over excel, maybe when there are too much lines to export
+ - portable case means a smaller version of the case, only the chosen portion is displayed 
+ - magnet review, helps team that is scattered to group up, using aws cloud 
+	 - encrypted s3 bucket
+	 - making it easy for multiple people to work on the same case over cloud
+ - VIC - for CPs (not CyberPunk)
+## Items to include
+- recommended doing, clean up the tags a bit 
+- summary information, you can or choose not to include it 
+- sending links to other people - don't check make external link clickable? could be malicious keep it text 
+- 

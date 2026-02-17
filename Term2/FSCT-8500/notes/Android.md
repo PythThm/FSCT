@@ -1,4 +1,4 @@
-# Andriod
+# Android
 #### File system
 1. Journaling Flash File system 2
 	1. shift data so much it kills the drive
