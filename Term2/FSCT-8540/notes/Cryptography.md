@@ -69,8 +69,34 @@ CBC: Plaintext Character + salt + shift, using index as salt from the previous c
 - used in symmetric cryptography
 - Secret (s) used to generate the MAC
 - provides authentication and integrity
+---
+# Diffie–Hellman Key Exchange (DH)
+## What it does
+Diffie–Hellman lets two parties **agree on a shared secret** over an insecure channel, without sending the secret itself.
+## Public values
+- Choose a large **prime number** `p`
+- Choose a **generator** `g`
+- `p` and `g` are **public**
+## Private values
+- Alice chooses a secret `a`
+- Bob chooses a secret `b`
+## Exchange
+- Alice sends:  
+  `A = g^a mod p`
+- Bob sends:  
+  `B = g^b mod p`
+## Shared secret (same result!)
+- Alice computes:  
+  `S = B^a mod p`
+- Bob computes:  
+  `S = A^b mod p`
+## Why it works
+Both get:\
+`S = g^{ab} \bmod p`
+An eavesdropper sees `p`, `g`, `A`, `B` — but **cannot feasibly compute** `S` without `a` or `b`.
+## Key idea
+- Easy to compute exponentiation, hard to reverse it  (discrete logarithm problem)
 
-## CA - Certification Authority
 
 In-Class Activity 
 1. (kb+(ks))
