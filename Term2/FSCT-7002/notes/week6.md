@@ -130,3 +130,4 @@ General rule is hearsay is inadmissible, but there are a ton of exception
 - we need to know what W did 
 - not to prove there is no one the house
 - if we need to prove that, call Bob and cross examine that guy 
+- s. 486.2 (1) exception
