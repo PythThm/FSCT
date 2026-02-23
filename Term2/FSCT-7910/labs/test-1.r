@@ -1,3 +1,6 @@
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("dplyr")) install.packages("dplyr")
+
 library(ggplot2)
 library(dplyr)
 
