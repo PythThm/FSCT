@@ -11,4 +11,6 @@ how do we know? we don't until we try
 each time Cellebrite updates, there will be new models
 we can bruteforce password protection if the device is locked (Verakey)
 ## Inseyets UFED -  Cellebrite's bruteforce box 
+- file system collection, unlocking phones
+- tokens required to be bought and use 
 - 
