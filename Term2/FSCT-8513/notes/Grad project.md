@@ -1,0 +1,12 @@
+## Graduation project
+- 3 parts, research proposal (September term), execution and presentation (January term)
+- presentation include posters, presentation to other people (like CIT practicum), live class presentation (in Burnaby), they invite all kinds of people 
+- If Raymond likes you he will get you a job 
+- We should start drafting our project asap 
+- decide on which field, DF or CyberSec
+- decision 2, choose and things you like doing 
+- one day next term, there would be someone from RCMP talking about what they do, RCMP provides us list of project they are interested in but dont have time to do 
+- like SnapChat disappearing chats, list from 10 to 20 projects 
+- high chances assigned a mentor from a RCMP do guide you doing the project (in person)
+- the project must have hands-on stuff
+- 
