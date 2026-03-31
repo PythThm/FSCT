@@ -19,4 +19,18 @@
 - specialist > Refine Volume Snapshot (manual processing)
 - Bookmark - Report Table Association
 - Index search - Simultaneous Search (blue binoculars) 
+
+## Columns
+- clicking the line above the column names (like you know the names, description, etc)
+- you can hover on some of the options and it will display a short description of it, or just go to help 
+- include and exclude? we arent going to use this course
+	- made for "oh something that i dont want to include in my investigation cuz my warrant does not allow it"
+	- totally remove excluded items will remove the hex and white space from your case 
+- next to every field is a number, that number is the fucking pixel that its going to be displayed as column
+- double click on it will create a default view for every colun
+- to move it, select it with the circle and move it with the arrow
+
+## Filter
+- the button next to the field of the column name
+- top left of the content theres a blue funnel icon, that will remove all the filters 
 - 
