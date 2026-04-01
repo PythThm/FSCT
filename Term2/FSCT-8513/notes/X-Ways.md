@@ -19,7 +19,7 @@
 - specialist > Refine Volume Snapshot (manual processing)
 - Bookmark - Report Table Association
 - Index search - Simultaneous Search (blue binoculars) 
-
+- X ways also place a unique ID on each files
 ## Columns
 - clicking the line above the column names (like you know the names, description, etc)
 - you can hover on some of the options and it will display a short description of it, or just go to help 
@@ -33,4 +33,28 @@
 ## Filter
 - the button next to the field of the column name
 - top left of the content theres a blue funnel icon, that will remove all the filters 
+
+## Emails
+- you can always do refine volume snapshot on individual files
+- not recommended to process and check emails on x ways 
+
+## Duplicate files
+- compute hash in refine volume snapshot, only on algorithm is enough
+- right click on the files, find duplicate in list, select what type of duplicate you want 
+- 'exclude all but one' means leaving only one dupe in the files 
+
+## Bookmarks 
+- report table, same name in columns 
+- shortcuts to add it to a bookmark, ctrl 1 alt 1
+- you can filter by bookmark as well
+- option to include child or parent files 
+
+## Report
+- files > create report 
+- output activity logs, sometimes its useful in cases where you accidentally find something relating to a crime 
+- "make copy of files for inclusion in report" - related files, attachments to a email 
+- highly recommend to name output file after unique IDs
+- "Alternative eml presentation" - for emails to show in browser
+- "position pictures" - thumbnail
+- fields to output - columns to show in details in the report 
 - 
