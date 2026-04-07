@@ -93,7 +93,8 @@ ___
 ## Items to include
 - recommended doing, clean up the tags a bit 
 - summary information, you can or choose not to include it 
-- sending links to other people - don't check make external link clickable? could be malicious keep it text 
+- sending links to other people - don't check make external link clickable? could be malicious keep it text  
+- make external link clickable
 
 ## Random stuff
 - SIDs - how do you find which user have which SIDs, in the registry
