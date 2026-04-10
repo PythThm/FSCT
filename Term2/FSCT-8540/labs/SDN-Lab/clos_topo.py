@@ -15,22 +15,40 @@ import time
 
 
 class ClosTopo(Topo):
-
     def __init__(self, fanout, cores, **opts):
-        # Initialize topology and default options
         Topo.__init__(self, **opts)
-       
-        "Set up Core and Aggregate level, Connection Core - Aggregation level"
-        #WRITE YOUR CODE HERE!
-        pass
 
-        "Set up Edge level, Connection Aggregation - Edge level "
-        #WRITE YOUR CODE HERE!
-        pass
-        
-        "Set up Host level, Connection Edge - Host level "
-        #WRITE YOUR CODE HERE!
-        pass
+        "Set up Core and Aggregate level, Connection Core - Aggregation level"
+        core_switches = []
+        for i in irange(1, cores):
+            core_sw = self.addSwitch('c%s' % i)
+            core_switches.append(core_sw)
+
+        agg_switches = []
+        for i in irange(1, fanout):
+            agg_sw = self.addSwitch('a%s' % i)
+            agg_switches.append(agg_sw)
+            for core_sw in core_switches:
+                self.addLink(agg_sw, core_sw)
+
+        "Set up Edge level, Connection Aggregation - Edge level"
+        edge_switches = []
+        for i in irange(1, fanout * fanout):
+            edge_sw = self.addSwitch('e%s' % i)
+            edge_switches.append(edge_sw)
+
+        for i, agg_sw in enumerate(agg_switches):
+            for j in irange(1, fanout):
+                edge_sw = edge_switches[(i * fanout) + (j - 1)]
+                self.addLink(agg_sw, edge_sw)
+
+        "Set up Host level, Connection Edge - Host level"
+        host_count = 1
+        for edge_sw in edge_switches:
+            for _ in irange(1, fanout):
+                host = self.addHost('h%s' % host_count)
+                self.addLink(edge_sw, host)
+                host_count += 1
 	
 
 def setup_clos_topo(fanout=2, cores=1):
