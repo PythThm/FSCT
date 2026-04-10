@@ -58,3 +58,20 @@ Mininet is a network emulator that sins up virtual hosts, switches, and controll
 ## SDN Security 
 The centralized controller is a main target as a common attack vector include DoS attacks on the controller, spoofing API messages (North and Southbound), an attacker spinning up their own rogue controller too hijack switches, and attacking overlay protocols like VXLAN or NVGRE which often lacks built-in authentication and encryption.
 
+SDN can enable powerful new security tools as well. Six use cases are covered:
+1. Traffic Filtering: 
+	1. SDN switches as firewalls
+	2. Anything not permitted is dropped
+	3. Cisco ACI/APIC and ISE integration for device profilling and TrustSec tagging
+2. Network Segmentation: 
+	1. Spit one physical network into logically isolated slices segments
+	2. Enforce strong isolation
+	3. Actions in one slice cannot affect another 
+3. DDoS Mitigation: 
+	1. Detects attacks, sends data to detection system, controller updates policy
+	2. controller pushes drop-rules to all edge switches, blocking entry points
+4. Network Access Control
+	1. Checks device's security posture before granting network access (IP, MAC)
+	2. Quarantine compromised hosts automatically (AMQ)
+5. Security Traffic Monitoring
+	1. SDN controller uses cheap commodity switches as tap aggregators
