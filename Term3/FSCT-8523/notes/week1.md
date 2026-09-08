@@ -1,0 +1,52 @@
+# Introduction
+- all roads leads to web activity
+- final assignment is heavily hands on, mid term and finals are theory
+- ^ release 2 weeks before finals
+- this week 3 page thing we need to practice on 
+
+# Browsers
+- Chromium based browsers, except gorzilla firefox 
+- flow of forensics events
+	- Web history > Downloads > Bookmarks > LoginData > Cache > Sesh data > 
+## Intent
+- someone can claim they accidentally clicked on a website
+- bookmarks and download are showing clear intent of that person
+## Chrome
+- any os any phones
+- Chrome bookmarks 
+	- show intent
+	- means person meant wants to go back to that website
+	- stored in sqlite database
+- Web cookies
+	- small files website leaves, know your client typ shit
+	- usage, activities, data, same location
+	- contains a lot of data, what pages user looked into 
+	- google analytics common thing for website owners to use, to see your data
+	- types of cookies: Session, Persistent, Third-party
+	- evident of intent, Attribution (IP or MAC)
+	- google analytics give information of how much an user goes on the website, tracks your activity
+- Downloads
+	- Filename download would remain the same, where the save it to is another intent
+	- is it opened by the user or not 
+- History
+	- chrome web history and web visits
+	- web history is a summary, web visit logs everything
+	- urls table, tracks user timeline and activities 
+- Chrome cache
+	- when you go on website, and there's a bunch of information and component
+	- chrome will cache that page, so everything will load faster 
+	- everything is cached and will grow in sizes 
+- Typed URLs
+	- someone type a URL, intent is higher than just pop up click 
+	- as long as you start typing, it will increase the type count by 1
+	- can claim the user is trying to go into that website
+- Autofill
+	- data in SQLite that gets filled overtime, in a file called web data
+	- store as in plaintext, so basic information only
+- Chrome Logins
+	- stores log for user logs into a site
+	- which user and passwords are entered 
+- Top sites
+	- list of the most popular website a user goes to 
+	- theres a ranking of them as well in the database, and thunbnail of the website
+	- 
