@@ -30,7 +30,7 @@
 ![[Pasted image 20260408132158.png]]
 
 ## SDN Benefits
-- Global networkq complexity
+- Global networking complexity
 - Faster deployment of services
 - Intelligent decision-making
 - Automation of configuration
@@ -75,3 +75,8 @@ SDN can enable powerful new security tools as well. Six use cases are covered:
 	2. Quarantine compromised hosts automatically (AMQ)
 5. Security Traffic Monitoring
 	1. SDN controller uses cheap commodity switches as tap aggregators
+	2. Collect and mirror traffic to security tools (IDS)
+	3. Cheaper than dedicated optical tap hardware
+6. Moving Target defense - MT6D
+	1. periodically changes a host's IPv6 address so attackers cannot pin down a target
+	2. SDN controller handles the address remapping transparently
