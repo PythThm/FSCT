@@ -1,0 +1,277 @@
+# Digital Forensics 2 — Cleaned Lecture Notes
+
+These notes reorganize two loosely transcribed lectures into clear study material. Repeated speech, hesitations, and transcription errors have been removed. Demonstrations are summarized in the order taught. Where the instructor's wording was unclear, the intended tool or term is identified from context; this is not a verbatim transcript.
+
+# Lecture 1 — Practical Forensic Tools and Methods
+
+## 1\. Why use small forensic tools?
+
+The instructor introduces free or inexpensive, specialized utilities that can supplement major forensic suites such as FTK, EnCase, and X-Ways. The goal is to perform common forensic tasks when a full suite is unavailable, while still documenting every action and maintaining evidence integrity. These exercises are recommended practice, and the instructor indicates that some tools and their functions may appear on the test.
+
+## 2\. Evidence integrity and write protection
+
+**Preferred method:** Connect original evidence to a forensic workstation through a **hardware write blocker**. This prevents writes to the evidence device. A **software write blocker** is an alternative, although the instructor expresses greater confidence in hardware write blockers.
+
+**Last-resort demonstration: Windows registry write protection.** The instructor shows how to configure the workstation to block writes to USB storage devices:
+
+1. Safely eject the USB device before changing the setting.  
+2. Open Registry Editor (`regedit`).  
+3. Navigate to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`.  
+4. Create a key named `StorageDevicePolicies`, if it does not exist.  
+5. Within that key, create a `DWORD (32-bit)` value named `WriteProtect`.  
+6. Set `WriteProtect` to `1` to enable write protection, then reconnect and test the USB device.  
+7. Set the value to `0` (or remove the created setting) to disable the protection.
+
+In the demonstration, the instructor successfully created and edited a file before the change. After enabling the setting, attempts to create or copy files to the USB device were blocked. Once disabled, writing was possible again.
+
+**Forensic caution:** This is presented as a fallback, not a replacement for validated forensic write-blocking procedures. Record any configuration changes and validation steps in examination notes.
+
+## 3\. Creating a raw image with dd for Windows
+
+When FTK Imager or EnCase imaging is unavailable, the instructor demonstrates **dd for Windows**, a command-line tool for creating a raw physical image of a device.
+
+- `dd --list`: lists available volumes/devices to help identify the source.  
+- `if=`: input file or source device.  
+- `of=`: output image file or destination.  
+- `bs=`: block size used for reading and writing.  
+- `--size`: determines the source size and avoids attempts to read beyond the device; highlighted as useful for external flash drives.  
+- `--progress`: displays imaging progress.
+
+**Illustrative command structure** (confirm the device identifier and the syntax supported by your installed dd version):
+
+```
+dd if=\\.\d: of=C:\output.dd bs=1M --size --progress
+```
+
+The demonstration identifies a removable `D:` drive and saves its image as `C:\output.dd`. The instructor emphasizes that dd produces a **raw physical image**, rather than a custom-content or logical image. Carefully verify the source and destination before running a command.
+
+## 4\. The Sleuth Kit: identifying a file system
+
+**The Sleuth Kit (TSK)** is a collection of forensic utilities, many command-line based. **Autopsy** is a graphical forensic analysis application associated with the same ecosystem.
+
+The instructor uses `fsstat` to inspect a disk image and identify its file system:
+
+```
+fsstat C:\Images\Drive1.001
+```
+
+The example reports **FAT32** and other file-system details such as its label and sector information. The instructor contrasts common associations: NTFS with Windows, HFS with macOS, and ext-family file systems with Linux, while noting that these associations are not absolute.
+
+**Exam takeaway:** `fsstat` reports file-system information from an image; it does not simply identify the operating system.
+
+## 5\. Mounting an image and scanning for malware
+
+The instructor uses **OSFMount** (PassMark) to mount a forensic image as a **read-only** drive. Mounting allows the examiner to browse files, extract relevant data, and use other tools against the mounted volume.
+
+A major warning concerns malware in evidence images. The instructor explains that forensic workstations may not have antivirus software installed because antivirus products can interfere with forensic tools or remove files that examiners need to preserve. However, extracting infected evidence files can put a workstation or organizational network at risk.
+
+**Demonstration:** Mount an image using OSFMount in read-only mode, then scan the mounted volume with Windows Defender. The sample image contains a threat that Defender detects.
+
+**Caution:** Do not execute suspicious files from a mounted image. Treat malware scanning as a controlled step that must not change the original evidence.
+
+## 6\. Inspecting offline startup entries with Autoruns
+
+**Autoruns**, part of the **Microsoft Sysinternals Suite**, displays applications, services, and other entries configured to start automatically.
+
+The instructor demonstrates how to examine a *mounted offline Windows image*, rather than just the examiner's live workstation:
+
+1. Mount the target Windows image.  
+2. Run Autoruns as administrator.  
+3. Select **File → Analyze Offline System** (wording may vary by version).  
+4. Point Autoruns to the mounted image's Windows directory and user-profile directory.  
+5. Review entries that could cause programs, including malware, to start automatically.
+
+**Exam takeaway:** Autoruns can be used to examine persistence and autostart artifacts in an offline Windows installation.
+
+## 7\. Autopsy: creating and processing a case
+
+The instructor demonstrates creating a new case in **Autopsy**, supplying basic case details, selecting a data source, and configuring processing options called **ingest modules**.
+
+Supported data-source choices shown include disk images/virtual machines, local disks, logical files, unallocated-space images, Autopsy logical images, and some third-party mobile-tool exports.
+
+**Ingest modules discussed:**
+
+- **Recent Activity:** user and browser activity.  
+- **Hash Lookup:** checks files against configured hash sets.  
+- **File Type Identification:** determines file type from content/signatures.  
+- **Extension Mismatch Detector:** flags inconsistencies between file extensions and detected types.  
+- **Embedded File Extractor:** extracts content from compound/container files.  
+- **Picture Analyzer:** examines image-related information.  
+- **Keyword Search / Interesting Files Identifier:** finds potentially relevant content.  
+- **Email Parser:** processes email artifacts.  
+- **Encryption Detection:** identifies potentially encrypted files.  
+- **PhotoRec Carver:** carves recoverable files, particularly useful for some deleted-image recovery.  
+- **Data Source Integrity:** checks data-source integrity.  
+- **iOS/Android analysis and GPX parsing:** mobile-related analysis and geolocation data from GPX files; the instructor notes limitations based on personal experience.
+
+The instructor also mentions a **Central Repository** and other newer modules, but does not explain every module in detail.
+
+### Autopsy interface and outputs
+
+Autopsy is described as having three principal panes: a **tree viewer**, a **results viewer**, and a **content viewer**. Examiners can browse files, inspect text/hex/metadata, review deleted files, filter by file type, use timelines and discovery views, add files to hash sets, extract individual files, and export selected metadata to CSV. Autopsy can also generate reports.
+
+**Distinction:** Extracting a file produces a separate copy of the file; exporting to CSV produces a table of file information and metadata.
+
+# Lecture 2 — Registry, Metadata, Browser, and Email Analysis
+
+## 1\. Windows Registry Recovery
+
+The instructor introduces **Windows Registry Recovery**, a standalone tool used to parse and inspect extracted Windows registry hives.
+
+### SYSTEM hive
+
+Opening a SYSTEM hive can reveal:
+
+- Registered services and drivers.  
+- Network configuration, including TCP/IP information.  
+- Other system configuration artifacts.
+
+### SAM hive
+
+Opening a SAM hive can reveal user and group information, including user names, security identifiers (SIDs), and account-related timestamps or properties exposed by the tool.
+
+The instructor explains that registry hives can be extracted from a forensic image, including system hives from `Windows\System32\config` and the user-specific `NTUSER.DAT` from the user's profile.
+
+**Exam takeaway:** SYSTEM is useful for machine-level configuration; SAM is useful for local user and group accounts; NTUSER.DAT contains user-specific registry information.
+
+## 2\. RegRipper — extracting important registry artifacts
+
+**RegRipper**, by Harlan Carvey, runs plugins against registry hive files and produces human-readable reports. It does not simply convert the entire hive to plain text; it extracts selected forensic artifacts.
+
+**Demonstration:**
+
+1. Select the registry hive, such as `NTUSER.DAT`.  
+2. Choose the output report location and filename.  
+3. Select the appropriate hive/profile.  
+4. Run the extraction and inspect the text report.
+
+The instructor notes that some plugins may report errors because they do not apply to the selected hive; this does not automatically mean that the entire analysis failed.
+
+### TypedURLs in NTUSER.DAT
+
+The instructor locates **TypedURLs**, which records URLs entered into Internet Explorer's address bar. This can be useful when investigating whether a particular URL was entered, but it does not by itself establish which person was at the keyboard. The lecture contrasts manually entered URLs with simply clicking links.
+
+### USBSTOR in the SYSTEM hive
+
+The instructor searches the SYSTEM hive report for **USBSTOR** entries. These may provide information about previously connected USB storage devices, including:
+
+- Device identity or product name.  
+- Serial-number information.  
+- First-install/first-connection timestamps, where available.
+
+The instructor gives an example in which matching a USB device to a computer could be relevant to an investigation. Interpret such artifacts carefully and corroborate them with other evidence.
+
+## 3\. Microsoft Office document metadata
+
+Modern Office formats such as **DOCX, XLSX, and PPTX** are ZIP-based packages containing XML files. The instructor demonstrates renaming a copy of a `.docx` file to `.zip`, opening the archive, and examining `docProps/core.xml`.
+
+Potential metadata includes:
+
+- Document creator.  
+- Last person to modify the document.  
+- Creation timestamp.  
+- Last-modified timestamp.  
+- Revision count.
+
+In the instructor's example, the creator and last modifier are different people, and the revision count is three. The same general inspection technique can be applied to the supplied PowerPoint and Excel practice files.
+
+**Exam takeaway:** `docProps/core.xml` is a useful source of Office document metadata.
+
+## 4\. Photo metadata and EXIF
+
+The instructor demonstrates an **EXIF-reading utility** to inspect photograph metadata. Depending on what the image contains, EXIF may include:
+
+- Date and time the photo was taken.  
+- Camera manufacturer and model.  
+- Which camera was used.  
+- GPS latitude and longitude.
+
+In the example, the image metadata indicates an **Apple iPhone 5s**, a photo date in **June 2014**, and coordinates that the instructor plots in Google Maps near **Hamburg, New York**.
+
+**Exam takeaway:** EXIF can help establish when, where, and with what device a photo was captured, if the relevant fields are present. Metadata should be assessed as evidence rather than treated as automatically authentic.
+
+## 5\. Browser history, cache, and cookies
+
+The instructor explains that browsers retain locally cached website resources to reduce repeated downloads and improve performance. Cache files, cookies, and browsing history may help reconstruct user web activity. Their storage locations depend on the browser and operating system.
+
+The lecture demonstrates free **NirSoft** utilities:
+
+### ChromeCacheView
+
+- Point the utility at an extracted Chrome cache directory instead of the examiner's own cache.  
+- Inspect cached URLs and available timestamps or server-related information.  
+- Search the example cache for domains such as StarWars.com and CNN.com.
+
+Example Chrome cache location discussed:
+
+```
+C:\Users\<Username>\AppData\Local\Google\Chrome\User Data\Default\Cache
+```
+
+### ChromeHistoryView
+
+- Configure the utility to use an extracted Chrome **History** database.  
+- Inspect recorded website visits, including the example's CNN, Star Wars, and Yahoo entries.
+
+Example Chrome history database:
+
+```
+C:\Users\<Username>\AppData\Local\Google\Chrome\User Data\Default\History
+```
+
+### MozillaCacheView
+
+- Select an extracted Firefox profile's cache directory.  
+- Parse cached resources from that browser.  
+- The instructor's example returns **587 items**.
+
+The Firefox example refers to a profile-specific `cache2` directory under the user's local Mozilla Firefox profile path.
+
+**Important distinction:** Browser **history** is a record of visits; **cache** stores downloaded resources; **cookies** store website-related state. These artifacts overlap in usefulness but are not identical.
+
+## 6\. Reading email headers
+
+The instructor demonstrates opening raw email headers in a text editor rather than relying on a full forensic suite. Email providers often offer a **View Original**, **Show Original**, or similar function to access the complete message headers.
+
+The lecture identifies several fields and forensic uses:
+
+| Field or indicator | Information to examine |
+| :---- | :---- |
+| `From:` | Claimed sender address |
+| `To:` | Intended recipient address |
+| `Received:` | Mail-server handoffs, associated timestamps, and sometimes IP addresses |
+| `Received` chain | Route through multiple servers; generally read from the bottom upward |
+| `Return-Path:` | Envelope return address, which can differ from the visible sender |
+| Originating IP / related header | Possible sender-side IP information, when present |
+| Message-source information | Clues about whether a webmail interface or mail client was used |
+
+The instructor stresses that **email header fields can be spoofed**, so visible sender information should not be accepted without analysis. The demonstration compares fields across two sample messages and reconstructs server hops using their Received entries and timestamps.
+
+**Clarification:** The lecture informally associates Return-Path with where replies go. Technically, `Return-Path` is the envelope bounce address; normal replies are generally directed using `Reply-To` if present, otherwise `From`. Keep this distinction in mind when applying the concept in a real investigation.
+
+# Quick Review — Tools and Their Main Uses
+
+| Tool / artifact | Main use demonstrated |
+| :---- | :---- |
+| Hardware write blocker | Protect original evidence from writes |
+| Registry `StorageDevicePolicies\WriteProtect` | Fallback USB write-protection setting |
+| dd for Windows | Create raw physical disk images |
+| Sleuth Kit `fsstat` | Identify and inspect image file systems |
+| OSFMount | Mount images read-only for inspection |
+| Windows Defender | Scan mounted evidence for potential malware |
+| Sysinternals Autoruns | Inspect startup/persistence entries, including offline Windows installations |
+| Autopsy | Create cases, ingest evidence, analyze artifacts, extract files, and report |
+| Windows Registry Recovery | Browse parsed registry hives |
+| RegRipper | Extract selected registry artifacts into reports |
+| `TypedURLs` | Internet Explorer address-bar URL artifacts |
+| `USBSTOR` | USB storage device history in registry artifacts |
+| `docProps/core.xml` | Office document creator, timestamps, and revisions |
+| EXIF reader | Camera, timestamp, and optional GPS photo metadata |
+| ChromeCacheView | Analyze Chrome cache artifacts |
+| ChromeHistoryView | Analyze Chrome browsing-history database |
+| MozillaCacheView | Analyze Firefox cache artifacts |
+| Raw email headers | Examine sender/recipient claims, routing, timestamps, and server information |
+
+## Likely exam-study priorities
+
+The instructor specifically says that some of the demonstrated **tools and functions** may be tested. Prioritize knowing **what each tool does**, **which evidence artifact it examines**, **what information it can reveal**, and **why evidence integrity and careful documentation matter**. The lecture's practice exercises are described as ungraded but recommended.

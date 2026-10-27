@@ -1,0 +1,60 @@
+# Crypto 2 + Ransomware — Study Notes
+
+## Lecture focus
+Continuation of cryptocurrency fundamentals: public/private keys, wallet types, recovery phrases, and forensic seizure relevance. The instructor then shifts to ransomware from a digital forensic and data-recovery perspective.
+
+## 1. Public keys, private keys and control
+- **Public key / receiving address:** the lecturer uses these approximately interchangeably when explaining how someone receives cryptocurrency. Technically, an address and public key are not always identical.
+- **Private key:** sensitive cryptographic credential used to authorize spending; disclosure may enable theft.
+- The instructor uses bank-account and PIN/password comparisons to illustrate that a wallet manages access rather than literally storing coins as physical objects.
+- A balance is reflected in blockchain records; the wallet manages credentials used to control funds.
+- Losing keys or recovery information can permanently eliminate practical access.
+
+## 2. Hot and cold wallets
+- **Hot wallet:** connected to an online environment; convenient but exposed to online threats.
+- **Cold wallet:** holds signing credentials offline; reduces online exposure but does not eliminate physical loss, theft or damage.
+- Security depends on more than one label: account control, implementation, credential backup and user behavior all matter.
+
+## 3. Wallet types in the lecture
+| Type | Lecture description | Main tradeoff |
+|---|---|---|
+| Paper | Printed key/credential information | Offline but can be lost, photographed, burned or damaged |
+| Hardware | Dedicated device, examples Trezor and Ledger | Strong separation of keys, but physical/device and recovery risks remain |
+| Desktop | Software installed on a computer | Depends heavily on endpoint security and how it is used |
+| Mobile | Wallet app on a phone | Convenient; security depends on device/app and custody model |
+| Web/exchange | Wallet or account accessed through website/app | Exchange may hold the controlling credentials; custody and hacking risk |
+- The instructor mentions Mycelium as an example of a mobile wallet and Coinbase/Binance as examples of exchange-related services.
+- **Important nuance:** desktop/mobile applications can be custodial or noncustodial; a device being internet-capable does not alone determine whether its keys are online at all times.
+
+## 4. Seed / recovery phrases
+- The lecture describes an often **12-word** recovery phrase used to restore access to a wallet; phrase lengths differ by wallet standard.
+- Words must be preserved exactly and in order; anyone obtaining a usable recovery phrase may be able to restore control of funds.
+- Forensic relevance: investigators may encounter handwritten lists of apparently unrelated words that are potential recovery phrases.
+- Handle such information as highly sensitive evidence and within legal authority; never enter an evidentiary phrase into an untrusted website.
+
+## 5. Ransomware: forensic perspective
+- The instructor distinguishes **cybersecurity/prevention** from **forensics/recovery after an incident**.
+- In an incident, files may be encrypted and a ransom demand displayed. The investigator evaluates what happened and what recovery options remain.
+- Attackers may delete or undermine backups and Volume Shadow Copies to frustrate restoration.
+- Examine the possibility of recoverable copies: backups, shadow copies, temporary files, deleted remnants, application autosaves and image thumbnails.
+- Whether these sources survive depends on the malware, storage, operating system, and post-incident activity.
+- Avoid assuming either that a commercial decryptor will always work or that every file is irrecoverable.
+- The instructor recounts a client example to illustrate that paying a ransom does not guarantee a working decryption key or honest follow-through.
+
+## 6. Incident-handling and evidence priorities
+- Document initial condition and preserve available evidence before experimenting with recovery.
+- Identify the ransomware family or variant where evidence permits; look for ransom notes, affected filenames/extensions and indicators of behavior.
+- Distinguish data restoration from malware eradication and future hardening.
+- Keep recovery experiments on copies and isolate unsafe material appropriately.
+- The course frames the issue from forensic investigation, not as a guarantee of payment or decryption success.
+
+## Exam review prompts
+1. Compare a public receiving address, a private key, and a seed phrase.
+2. Classify paper, hardware, desktop, mobile and exchange wallets and explain the key risks.
+3. Why is it dangerous when an exchange custodies users' keys?
+4. What makes a handwritten word list potentially relevant to a cryptocurrency investigation?
+5. What artifacts might allow recovery after ransomware encryption, and why is their availability uncertain?
+6. Why does paying ransom not guarantee decryption?
+
+## Source cautions
+The instructor's comments comparing platforms' security and particular wallet products are opinions/examples from the lecture, not timeless product security guarantees. Practical seizure, payment or recovery decisions also require current technical and legal assessment.

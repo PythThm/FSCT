@@ -1,0 +1,58 @@
+# Various Tools Part 3 + Registry — Study Notes
+
+## Lecture focus
+Practical forensic analysis using free utilities, followed by an introduction to Windows Registry structure. The instructor explicitly stresses that the tool demonstrations and artifact concepts can appear on tests even without a PowerPoint slide deck.
+
+## 1. Windows Prefetch
+- Introduced with Windows XP as an application-startup optimization mechanism.
+- Records information relevant to program startup, including executable name/path, referenced files, execution count and execution times where supported by the Windows version and Prefetch format.
+- Prefetch files commonly use **`.pf`** and reside under `C:\Windows\Prefetch`.
+- The instructor describes the first roughly ten seconds of application startup and a limit of 128 entries in older examples; these details vary with Windows version.
+- **Forensic importance:** Prefetch artifacts can support a conclusion that an executable ran, even if its program has since been removed; absence of a file does not establish non-execution.
+- **WinPrefetchView (NirSoft):** demonstration of selecting a different source directory using Options → Advanced Options.
+- Example: inspecting an Autopsy Prefetch file to identify its run count, last-run time, process path and referenced files.
+
+## 2. Windows shortcuts / shell links
+- Shortcuts have **`.lnk`** extension and point to files, programs, folders or volumes.
+- The instructor identifies four shortcut creation paths: application installation, opening items through Explorer, opening files through Microsoft Office, and manual creation.
+- Example artifact directories:
+  - `C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Recent`
+  - `C:\Users\<username>\AppData\Roaming\Microsoft\Office\Recent`
+- A shortcut may remain after its target has been deleted or moved.
+- Potential LNK fields include target path and name, volume information, target size, timestamps and system identifiers such as a MAC address when present.
+- **Windows File Analyzer:** utility demonstrated to parse a group of LNK files; the instructor uses a shortcut pointing to a forensic evidence image.
+- **Forensic caution:** creation of a shortcut or embedded target metadata must be interpreted in context; it is not automatically proof that a specific human opened the target.
+
+## 3. Jump Lists
+- Introduced in Windows 7 as a mechanism to present recent and frequent items associated with applications.
+- Unlike individual LNK shortcuts, Jump Lists group activity references for an application and use different storage formats.
+- The lecturer examines **AutomaticDestinations** and demonstrates **JumpLister**.
+- Demonstration workflow: select File → Load, choose multiple Jump List files, review the item tree and the destination-list information.
+- Potential observations: files/folders previously accessed, paths, access-related times and system metadata.
+- Correlate Jump Lists with LNK, Prefetch and filesystem artifacts for a more defensible activity timeline.
+
+## 4. Windows Registry fundamentals
+- Registry is a hierarchical Windows database of configuration and historical information.
+- Distinguish **keys, subkeys, values, data types and value data**.
+- Five logical root keys mentioned: HKCR, HKCU, HKLM, HKU and HKCC.
+- Common physical hives in `C:\Windows\System32\Config`: SYSTEM, SOFTWARE, SECURITY and SAM (among others); user-specific **NTUSER.DAT** and **UsrClass.dat** reside in user-profile paths.
+- The instructor explains logical versus physical structure and points students toward later, hands-on analysis of relevant entries.
+- **Control sets:** used in SYSTEM hive for configuration; the lecture compares Windows 7 and Windows 10 examples. Verify which control set is active when inspecting an offline hive.
+
+## Tool–artifact matching
+| Tool | Main lecture use |
+|---|---|
+| WinPrefetchView | Parse Prefetch `.pf` files |
+| Windows File Analyzer | Review shortcut `.lnk` metadata |
+| JumpLister | Inspect Jump List files |
+| Registry Viewer | Navigate and interpret Windows hive contents |
+
+## Exam review prompts
+1. How can Prefetch evidence indicate executable activity, and what are its limitations?
+2. Name the four shortcut-creation routes given in the lecture.
+3. What metadata might survive in a LNK after the target is deleted?
+4. Contrast a shortcut with a Jump List.
+5. Name the five logical registry hives and distinguish them from hive files on disk.
+
+## Source caution
+A few figures and Windows behavior descriptions are version-dependent. These notes reflect the examples taught, rather than guaranteeing identical behavior on every Windows build.

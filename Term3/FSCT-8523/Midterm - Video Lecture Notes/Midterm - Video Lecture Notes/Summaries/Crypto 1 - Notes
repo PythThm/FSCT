@@ -1,0 +1,47 @@
+# Crypto 1 — Study Notes
+
+## Lecture focus
+The instructor introduces cryptocurrency for digital forensic investigators: why it matters, how the system differs from conventional banking, the double-spending problem, distributed ledgers, and Bitcoin mining. The lecture uses Bitcoin as its primary example; the instructor cautions that not all cryptocurrencies operate in exactly the same way.
+
+## Why forensic investigators study cryptocurrency
+- Investigations may involve profits, suspected proceeds of crime, online markets, exchanges, and the storage or transfer of digital assets.
+- Examiners need to recognize evidence of wallet use and cryptocurrency activity, not merely know prices or names of coins.
+- The broader course aims to move from understanding transactions and wallets toward identifying, preserving, and potentially seizing assets.
+
+## History
+- **Satoshi Nakamoto:** pseudonym attached to the October 2008 Bitcoin white paper. The instructor emphasizes that the identity behind it is unknown.
+- **Double-spending problem:** how to prevent a digital unit of value from being copied or spent multiple times without a trusted intermediary.
+- **David Chaum (1983):** earlier work on digital currency and cryptography.
+- **DigiCash, E-gold, Liberty Reserve:** historical digital-money initiatives mentioned as predecessors or contrasts.
+- **Assigned reading:** the instructor tells students to read the original Bitcoin white paper and warns it may be assessed.
+
+## Cash versus digital transactions
+- A physical $5 note can be physically handed over once. A mere JPEG of a $5 note could be copied indefinitely, illustrating the double-spending problem.
+- In conventional card or bank transfers, banks and payment processors authorize payments and track account activity.
+- These trusted intermediaries maintain **ledgers** of deposits, withdrawals, and transfers, and typically charge fees.
+- The instructor compares a bank account and card/PIN to the later concept of a wallet and credentials; this is an analogy, not an assertion that they are technically identical.
+- **Fiat currency:** government-issued money; the instructor gives cash and bank balances as examples. Note that the lecture's passing mention of gold as fiat is an imprecise analogy.
+
+## Peer-to-peer and decentralization
+- Bitcoin is presented as a peer-to-peer electronic cash system rather than a payment service controlled by one bank.
+- **Decentralized:** transactions and ledger state are validated across a network rather than administered by one central authority.
+- **Blockchain:** a shared ledger of transactions. The instructor compares each block to a page in an accounting ledger.
+- **Node:** computer participating in the network and maintaining or checking blockchain data.
+- The instructor emphasizes the difficulty of changing one local copy when other participants verify the network state.
+
+## Blocks and mining
+- Bitcoin blocks are added on an approximately ten-minute schedule on average; it is not an exact timer for every block.
+- Blocks contain transaction data and are cryptographically linked. Miners compete to produce valid blocks under the network rules.
+- The lecture discusses computational work, hashes, mining equipment and energy use.
+- Miners may receive a block subsidy plus transaction fees. Any specific subsidy or network-size figures stated in the recording are historical and should not be memorized as current values.
+- The instructor mentions graphics processing units and specialized mining farms in discussing the computing demands of mining.
+
+## Forensic takeaways
+1. Know the difference between conventional financial institutions' ledgers and a distributed blockchain.
+2. Be able to explain double spending using the physical-cash versus copyable-digital-file analogy.
+3. Define blockchain, block, node, mining, wallet and peer-to-peer in the context of this lecture.
+4. Remember why transaction histories are relevant evidence, but do not assume a public address identifies a person by itself.
+5. Read the Bitcoin white paper, as expressly requested by the instructor.
+
+## Source cautions
+The speaker uses examples, prices, market-size figures and mining rewards from the time the lecture was recorded. They are historical examples, not present-day measurements. These notes prioritize the concepts taught; they do not independently verify every numerical claim in the transcription.

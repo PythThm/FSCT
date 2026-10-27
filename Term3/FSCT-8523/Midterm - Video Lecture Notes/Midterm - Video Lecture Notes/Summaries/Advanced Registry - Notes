@@ -1,0 +1,53 @@
+# Advanced Registry — Study Notes
+
+## Lecture focus
+Hands-on use of Windows Registry hives and Registry Viewer, followed by the forensic value of system configuration, timestamps, installed applications, user accounts, and user activity.
+
+## Registry evidence and tools
+- The instructor demonstrates opening extracted registry hives rather than relying on the live Registry alone.
+- **SYSTEM, SOFTWARE, SECURITY, SAM, NTUSER.DAT:** distinct sources of system and user information.
+- **AccessData Registry Viewer:** used to browse keys, inspect values and interpret binary/hexadecimal data.
+- **DCode:** demonstrated as a timestamp-decoding tool. Always validate the original value and time-zone handling.
+- The instructor's main message: learn which artifact families exist; exact key paths can be looked up when required.
+
+## SYSTEM hive
+- **Time-zone settings:** `SYSTEM\ControlSet00x\Control\TimeZoneInformation`; the lecture looks for the configured time zone and abbreviations.
+- **Shutdown time:** `SYSTEM\ControlSet00x\Control\Windows\ShutdownTime`; interpretation requires decoding a stored timestamp.
+- **Caution:** a forced power-off may prevent a last-shutdown artifact from being updated. Decoders may display local time rather than UTC.
+- **Services and startup configuration:** service entries can indicate configured launch behavior. The instructor discusses start values such as automatic, manual and disabled.
+- **Events:** the instructor pairs registry configuration with Windows Event Logs for richer timelines.
+
+## SOFTWARE hive
+- **Operating-system installation data:** under `SOFTWARE\Microsoft\Windows NT\CurrentVersion`; examples include InstallDate, product version and registered owner.
+- **Important caveat:** on Windows 10, a major upgrade can alter installation-related fields; corroborate with other timestamps and evidence of `Windows.old`.
+- **RegisteredOwner:** a configuration value, not proof of the person who actually used a computer.
+- **Application versions:** example keys for Microsoft Internet Explorer and other installed Microsoft software.
+- **Auto-start entries:** examples under `SOFTWARE\Microsoft\Windows\CurrentVersion\Run`; entries can indicate software configured to launch at sign-in.
+
+## SAM hive, accounts and identifiers
+- **SID:** Security Identifier; Windows identity identifier.
+- **RID:** Relative Identifier, the terminal part of a SID used to identify an account within its domain/computer context.
+- **RID 500:** built-in Administrator account; **RID 501:** built-in Guest account in the examples.
+- User-created accounts commonly use RIDs beginning at 1000 in the example environment.
+- The lecture demonstrates logon counts, last-logon timestamps, password-related information, account status, group membership and password hints.
+- **Do not infer actual account use from existence alone.** Built-in accounts can exist without normal user activity.
+- The instructor also discusses password hashes and the fact that a displayed hash or placeholder does not necessarily establish an actual password.
+
+## User attribution and NTUSER.DAT
+- `C:\Users\<username>\NTUSER.DAT` is a per-user registry hive.
+- Correlate user identifiers, account records and user-specific artifacts; names alone can be changed or duplicated.
+- The lecture connects SIDs/RIDs to per-user Recycle Bin directories when interpreting deleted-file ownership.
+
+## Other investigative topics
+- The lecture also examines externally connected USB devices and other user-activity traces. Serial-number-like identifiers, device names and timestamps may support an association between a particular device and computer, subject to validation.
+- Treat registry timestamps as one source in a timeline, not as definitive proof without context.
+
+## Exam review prompts
+1. Which hive would you inspect for a user's accounts and RIDs? For installed Windows version information? For time zone and shutdown time?
+2. What is the distinction between a SID and an RID?
+3. Why might a Windows install date be misleading after an upgrade?
+4. Why should a last-shutdown timestamp be corroborated?
+5. How would you associate a per-user Recycle Bin location with an account?
+
+## Scope note
+These are study notes on the lecturer's examples. Registry behavior changes across Windows versions, and some speech-to-text key names are unclear; use the actual hive and OS build to validate precise paths before practical work.
